@@ -1,0 +1,604 @@
+/* Heavily inspired by https://github.com/edwardtufte/tufte-css */
+
+@font-face{
+    font-family: 'Source Serif';
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('https://cdn.jsdelivr.net/gh/adobe-fonts/source-serif/WOFF2/TTF/SourceSerif4-Regular.ttf.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/adobe-fonts/source-serif/WOFF/OTF/SourceSerif4-Regular.otf.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.katex { font-size: 2em !important; } 
+
+html {
+    font-size: 15px;
+}
+
+body {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Source Serif, Georgia, serif;
+    background-color: #fffff8;
+    color: #111;
+    max-width: 1400px;
+    counter-reset: sidenote-counter;
+}
+
+/* Adds dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #151515;
+        color: #ddd;
+    }
+
+    .astro-code,
+    .astro-code span {
+        color: var(--shiki-dark) !important;
+        background-color: var(--shiki-dark-bg) !important;
+        /* Optional, if you also want font styles */
+        font-style: var(--shiki-dark-font-style) !important;
+        font-weight: var(--shiki-dark-font-weight) !important;
+        text-decoration: var(--shiki-dark-text-decoration) !important;
+    }
+}
+
+h1 {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+h2 {
+    font-weight: 400;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 1;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 55%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+p.subtitle {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    display: block;
+    line-height: 1;
+}
+
+.numeral {
+    font-family: Source Serif;
+}
+
+.danger {
+    color: red;
+}
+
+article {
+    padding: 5rem 0rem;
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+p,
+dl,
+ol,
+ul {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline;
+}
+
+/* Chapter Epigraphs */
+div.epigraph {
+    margin: 5em 0;
+}
+
+div.epigraph > blockquote {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+div.epigraph > blockquote,
+div.epigraph > blockquote > p {
+    font-style: italic;
+}
+
+div.epigraph > blockquote > footer {
+    font-style: normal;
+}
+
+div.epigraph > blockquote > footer > cite {
+    font-style: italic;
+}
+/* end chapter epigraphs styles */
+
+blockquote {
+    font-size: 1.4rem;
+}
+
+blockquote p {
+    margin-right: 40px;
+}
+
+blockquote footer {
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+
+
+dt:not(:first-child),
+li:not(:first-child) {
+    margin-top: 0.25rem;
+}
+
+figure {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-width: 55%;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0 0 3em 0;
+}
+
+figcaption {
+    float: right;
+    clear: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 40%;
+}
+
+figure.fullwidth figcaption {
+    margin-right: 24%;
+}
+
+/* Tables */
+/* https://github.com/jez/tufte-pandoc-css/tree/master/tufte-pandoc.css */
+table {
+    border-top: 2px solid #151515;
+    border-bottom: 2px solid #151515;
+    margin: 2rem auto;
+}
+
+th {
+    border-bottom: 1px solid #151515;
+}
+
+td, th {
+    font-size: 1.4rem;
+    padding: 10px;
+    text-align: left;
+}
+
+@media (prefers-color-scheme: dark) {
+    table {
+        border-top: 2px solid #ddd;
+        border-bottom: 2px solid #ddd;
+    }
+
+    th {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* Tag Style: Classic Tufte */
+.tags-classic {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+.tags-classic .tag {
+    display: inline;
+    font-variant: small-caps;
+    letter-spacing: 0.03em;
+    margin-right: 0.8rem;
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.tags-classic .tag:hover {
+    border-bottom-color: #666;
+}
+
+@media (prefers-color-scheme: dark) {
+    .tags-classic .tag {
+        color: #aaa;
+    }
+    .tags-classic .tag:hover {
+        border-bottom-color: #aaa;
+    }
+}
+
+
+/* Links */
+a:link,
+a:visited {
+    color: inherit;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 0.05em;
+}
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.sidenote-number {
+    counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    font-family: Source Serif;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem;
+}
+
+.sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: 1rem;
+    top: -0.5rem;
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left;
+}
+
+div.fullwidth,
+table.fullwidth {
+    width: 100%;
+}
+
+div.table-wrapper {
+    overflow-x: auto;
+    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif;
+}
+
+.sans {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing: .03em;
+}
+
+code, pre > code {
+    font-family: JetBrains Mono, "Liberation Mono", monospace;
+    font-size: 1.0rem;
+    line-height: 1.42;
+    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
+}
+
+.sans > code {
+    font-size: 1.2rem;
+}
+
+h1 > code,
+h2 > code,
+h3 > code {
+    font-size: 0.80em;
+}
+
+.marginnote > code,
+.sidenote > code {
+    font-size: 1rem;
+}
+
+pre > code {
+    font-size: 0.9rem;
+    padding: 1em;
+    overflow-x: auto;
+    display: block;
+}
+
+pre.fullwidth > code {
+    width: 90%;
+}
+
+.fullwidth {
+    max-width: 90%;
+    clear:both;
+}
+
+span.newthought {
+    font-variant: small-caps;
+    font-size: 1.2em;
+}
+
+input.corner-toggle {
+    display: none;
+}
+  
+.corner-toggle:hover::before {
+    border-top-color: #6e6e6e;
+}
+  
+/* Hidden checkbox */
+.corner-checkbox {
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+
+label.sidenote-number {
+    display: inline-block;
+    max-height: 2rem; /* should be less than or equal to paragraph line-height */
+}
+
+label.corner-toggle:not(.sidenote-number) {
+    display: none;
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fix for mobile */
+main {
+     overflow-x: hidden; 
+}
+
+@media (max-width: 480px) {
+    html {
+      font-size: 14px !important;
+    }
+    
+    body {
+      width: 100% !important;
+      padding-left: 4% !important;
+      padding-right: 4% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    
+    h1 {
+      font-size: 2.2rem !important;
+      margin-top: 1.5rem !important;
+    }
+    
+    h2 {
+      font-size: 1.6rem !important;
+      margin-top: 1.5rem !important;
+    }
+    
+    h3 {
+      font-size: 1.4rem !important;
+      margin-top: 1.5rem !important;
+    }
+    
+    p, blockquote {
+      font-size: 1.3rem !important;
+      line-height: 1.8rem !important;
+    }
+    
+    .tags-classic .tag {
+      margin-right: 0.6rem !important;
+      font-size: 1rem !important;
+    }
+    
+    /* Fix epigraph on mobile */
+    div.epigraph {
+      margin: 2em 0 !important;
+    }
+    
+    div.epigraph > blockquote {
+      margin: 1em 0 !important;
+    }
+    
+    /* Ensure full width on mobile */
+    article {
+      padding: 2rem 0 !important;
+    }
+    
+    /* Table responsiveness */
+    table {
+      width: 100% !important;
+      font-size: 1.1rem !important;
+      display: block !important;
+      overflow-x: auto !important;
+      white-space: nowrap !important;
+      border-collapse: collapse !important;
+    }
+    
+    th, td {
+      font-size: 1.1rem !important;
+      padding: 8px 6px !important;
+      min-width: 80px !important;
+    }
+
+    .tags-classic .tag {
+        margin-right: 0.6rem !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 760px) {
+    body {
+        width: 100%;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    hr,
+    section > p,
+    section > footer,
+    section > table {
+        width: 100%;
+    }
+
+    pre > code {
+        width: 97%;
+    }
+
+    section > dl,
+    section > ol,
+    section > ul {
+        width: 90%;
+    }
+
+    figure {
+        max-width: 90%;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    figcaption,
+    figure.fullwidth figcaption {
+        margin-right: 0%;
+        max-width: none;
+    }
+
+    blockquote {
+        margin-left: 1.5em;
+        margin-right: 0em;
+    }
+
+    blockquote p,
+    blockquote footer {
+        width: 100%;
+    }
+
+    label.corner-toggle:not(.sidenote-number) {
+        display: inline;
+    }
+
+    .sidenote,
+    .marginnote {
+        display: none;
+    }
+
+    .corner-checkbox:checked + .sidenote,
+    .corner-checkbox:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative;
+    }
+
+    .corner-toggle:has(~ .corner-checkbox:checked)::before {
+        display: none;
+    }
+
+    .corner-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4em;
+        height: 4em;
+        background: transparent;
+        cursor: pointer;
+        z-index: 2;
+    }
+      
+    /* Triangle */
+    .corner-toggle::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 4em solid #8888889c;
+        border-left: 4em solid transparent;
+        transition: border-top-color 0.2s;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    div.table-wrapper,
+    table {
+        width: 85%;
+    }
+}
