@@ -1,0 +1,7 @@
+# Logical but not reasonable. Wasn't that the definition of a robot? - I.A.
+
+User-agent: *
+Allow: /
+
+Sitemap: https:///sitemap-index.xml
+flag{u-cant-see-me-where}
