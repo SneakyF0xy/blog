@@ -1,50 +1,131 @@
-# Astro Starter Kit: Minimal
+# 🚀 Astro Blog
 
-```sh
-npm create astro@latest -- --template minimal
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
+[![GitHub license](https://img.shields.io/github/license/SneakyF0xy/blog)](https://github.com/SneakyF0xy/blog/blob/main/LICENSE)
+
+A modern, fast blog built with Astro featuring space exploration content.
+
+## ✨ Features
+
+- ⚡ Lightning fast performance with Astro
+- 📱 Fully responsive design
+- 🎨 Beautiful Tufte CSS-inspired typography
+- 📝 Markdown support with frontmatter
+- 🏷️ Tag and category system
+- 🔍 SEO optimized
+
+## 🚀 Quick Start
+
+1. **Clone and install**
+   ```bash
+   git clone https://github.com/SneakyF0xy/blog.git
+   cd blog
+   npm install
+   ```
+
+2. **Start development**
+   ```bash
+   npm run dev
+   ```
+
+3. **Open browser**
+   Visit `http://localhost:4321`
+
+## 📝 Writing Posts
+
+Create `.md` files in `src/content/blog/`:
+
+```markdown
+---
+title: Your Post Title
+description: Brief description
+category: casual
+date: 2025-07-23
+tags: [space, technology]
+---
+
+# Your Content
+
+Write your post content here!
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## 🛠️ Commands
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview build |
+| `npm run lint` | Run all linters |
+| `npm run lint:md` | Lint Markdown files |
+| `npm run lint:css` | Lint CSS files |
+| `npm test` | Run tests |
 
-## 🚀 Project Structure
+## 📁 Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+```
+blog/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── content/blog/   # Blog posts (.md)
+│   ├── pages/          # Routes
+│   ├── plugins/        # Custom plugins
+│   └── styles/         # CSS files
+├── public/             # Static assets
+├── test/               # Test files
+└── astro.config.mjs    # Config
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each
-page is exposed as a route based on its file name.
+## 🚀 Deploy
 
-There's nothing special about `src/components/`, but that's where we like to
-put any Astro/React/Vue/Svelte/Preact components.
+Build with `npm run build` and deploy the `dist/` folder to:
+- GitHub Pages (workflow included)
+- Vercel: `vercel`
+- Netlify: Upload `dist/` folder
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🤝 Contributing
 
-## 🧞 Commands
+We welcome contributions! Here's how to get involved:
 
-All commands are run from the root of the project, from a terminal:
+### Development Contributions
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1. **Fork & Clone**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/blog.git
+   cd blog
+   npm install
+   ```
 
-## 👀 Want to learn more?
+2. **Create Feature Branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into
-our [Discord server](https://astro.build/chat).
+3. **Make Changes & Test**
+   ```bash
+   npm run lint    # Check code quality
+   npm test        # Run tests
+   npm run build   # Test production build
+   ```
+
+4. **Submit Pull Request**
+   - Clear title and description
+   - Reference related issues
+   - Include screenshots for UI changes
+
+### Ways to Contribute
+
+- 🐛 Fix bugs and improve functionality
+- ✨ Add new features and enhancements
+- 🎨 Improve design and user experience
+- 📝 Enhance documentation
+- 🚀 Optimize performance
+
+### Get Help
+
+- 💬 **Discussions**: Use [GitHub Discussions](https://github.com/SneakyF0xy/blog/discussions) for questions and ideas
+- 🐛 **Issues**: Report bugs or request features via [GitHub Issues](https://github.com/SneakyF0xy/blog/issues)
+- 📖 **Documentation**: Check existing issues before creating new ones
+
+## 📄 License
+
+All blog posts are copyrighted. If you want use it, cite! But code are open to use. License - see [LICENSE](LICENSE) file.
