@@ -2,7 +2,6 @@
 import { visit } from 'unist-util-visit';
 
 export default function remarkWrap() {
-  console.log('remarkWrap')
   return (tree) => {
     const sections = [];
     let currentSection = null;
