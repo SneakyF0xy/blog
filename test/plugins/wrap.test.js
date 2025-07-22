@@ -40,7 +40,6 @@ test('wraps h2+ sections in containers', () => {
         Text B
     `;
     const ast = processMarkdown(markdown);
-    console.dir(ast, { depth: null })
     // 3 sections: 1st is the title, 2nd is the first section, 3rd is the second section
     expect(ast.children).toHaveLength(3);
     ast.children.forEach(expectSectionContainer);
