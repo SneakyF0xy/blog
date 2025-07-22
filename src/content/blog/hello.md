@@ -11,12 +11,13 @@ tags:
 
 <div class="epigraph">
 <blockquote>
-<p>An astronaut cannot be suspended in space and not have God in his mind and his heart.</p>
+<p>An astronaut cannot be suspended in space and not have God in his mind and
+his heart.</p>
 <footer>Yuri Gagarin</footer>
 </blockquote>
 </div>
 
-# Countdown to the Stars
+## Countdown to the Stars
 
 T-minus 15 seconds. Guidance is internal.
 
@@ -28,12 +29,16 @@ Ignition Sequence Start.
 
 All engine running.
 
-And **Lift-Off**! We have a Lift-Off! 32 minutes past the hour. Lift-Off on Apollo 11! Tower Clear! Text Text Text Text Text
+And **Lift-Off**! We have a Lift-Off! 32 minutes past the hour.
+Lift-Off on Apollo 11! Tower Clear!
 
 <figure>
 <label for="mn-exports-imports" class="corner-toggle"></label>
 <input type="checkbox" id="mn-exports-imports" class="corner-checkbox">
-<span class="marginnote">The Apollo 11 Saturn V space vehicle lifted off with Astronauts Neil A. Armstrong, Michael Collins and Edwin E. Aldrin Jr. at 9:32 a.m. EDT July 16, 1969, from Kennedy Space Center's Launch Complex 39A.</span>
+<span class="marginnote">The Apollo 11 Saturn V space vehicle lifted off with
+Astronauts Neil A. Armstrong, Michael Collins and Edwin E. Aldrin Jr.
+at 9:32 a.m. EDT July 16, 1969, from Kennedy Space Center's Launch Complex 39A.</span>
+<!-- markdownlint-disable-next-line MD013 -->
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg" alt="Rocket Launch" width="1000"/>
 </figure>
 
@@ -55,6 +60,7 @@ $$
 $$
 
 Where:
+
 - $G$ — gravitational constant,  
 - $M$ — mass of the central body,  
 - $r$ — radius of orbit.
@@ -79,14 +85,13 @@ print(f"Orbital velocity at 400km altitude: {velocity:.2f} m/s")
 
 ## Explore More
 
-* [AstroBin](https://www.astrobin.com/) — Astrophotography platform
-* [APOD](https://apod.nasa.gov/apod/astropix.html) — Astronomy Picture of the Day
+- [AstroBin](https://www.astrobin.com/) — Astrophotography platform
+- [APOD](https://apod.nasa.gov/apod/astropix.html) — Astronomy Picture of the Day
 
 ## Keep Looking Up
 
 Whether it's the whisper of distant quasars or the silent arcs of satellites,
 the cosmos continues to inspire wonder, exploration, and unity.
 Stay curious.
-
 
 $\mathcal{S}$neaky$\mathcal{F}$oxy
