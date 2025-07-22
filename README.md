@@ -1,15 +1,19 @@
-# 🚀 Astro Blog
+# 🦊 SneakyFoxy Blog
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
 [![GitHub license](https://img.shields.io/github/license/SneakyF0xy/blog)](https://github.com/SneakyF0xy/blog/blob/main/LICENSE)
+[![Code size](https://img.shields.io/github/languages/code-size/SneakyF0xy/blog)](https://github.com/SneakyF0xy/blog)
+[![Build Status](https://github.com/emazzotta/lighthouse-badges/workflows/build/badge.svg)](https://github.com/emazzotta/lighthouse-badges/actions)
 
-A modern, fast blog built with Astro featuring space exploration content.
+A personal cybersecurity blog covering CTFs, cryptography,
+and security research in a casual, accessible way.
+Built with Astro for blazing-fast performance.
 
 ## ✨ Features
 
 - ⚡ Lightning fast performance with Astro
 - 📱 Fully responsive design
-- 🎨 Beautiful Tufte CSS-inspired typography
+- 🎨 Beautiful [Tufte CSS](https://github.com/edwardtufte/tufte-css)-inspired typography
 - 📝 Markdown support with frontmatter
 - 🏷️ Tag and category system
 - 🔍 SEO optimized
@@ -17,6 +21,7 @@ A modern, fast blog built with Astro featuring space exploration content.
 ## 🚀 Quick Start
 
 1. **Clone and install**
+
    ```bash
    git clone https://github.com/SneakyF0xy/blog.git
    cd blog
@@ -24,6 +29,7 @@ A modern, fast blog built with Astro featuring space exploration content.
    ```
 
 2. **Start development**
+
    ```bash
    npm run dev
    ```
@@ -44,7 +50,7 @@ date: 2025-07-23
 tags: [space, technology]
 ---
 
-# Your Content
+## Your header
 
 Write your post content here!
 ```
@@ -57,13 +63,14 @@ Write your post content here!
 | `npm run build` | Build for production |
 | `npm run preview` | Preview build |
 | `npm run lint` | Run all linters |
-| `npm run lint:md` | Lint Markdown files |
-| `npm run lint:css` | Lint CSS files |
+| `npm run lint:md` | Lint Markdown files with Markdownlint |
+| `npm run lint:css` | Lint CSS files with Stylish |
+| `npm run lint:js` | Lint JS/TS files with ESLint |
 | `npm test` | Run tests |
 
 ## 📁 Structure
 
-```
+```text
 blog/
 ├── src/
 │   ├── content/blog/   # Blog posts (.md)
@@ -78,6 +85,7 @@ blog/
 ## 🚀 Deploy
 
 Build with `npm run build` and deploy the `dist/` folder to:
+
 - GitHub Pages (workflow included)
 - Vercel: `vercel`
 - Netlify: Upload `dist/` folder
@@ -89,6 +97,7 @@ We welcome contributions! Here's how to get involved:
 ### Development Contributions
 
 1. **Fork & Clone**
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/blog.git
    cd blog
@@ -96,11 +105,13 @@ We welcome contributions! Here's how to get involved:
    ```
 
 2. **Create Feature Branch**
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 3. **Make Changes & Test**
+
    ```bash
    npm run lint    # Check code quality
    npm test        # Run tests
@@ -122,10 +133,16 @@ We welcome contributions! Here's how to get involved:
 
 ### Get Help
 
-- 💬 **Discussions**: Use [GitHub Discussions](https://github.com/SneakyF0xy/blog/discussions) for questions and ideas
-- 🐛 **Issues**: Report bugs or request features via [GitHub Issues](https://github.com/SneakyF0xy/blog/issues)
+- 💬 **Discussions**: Use
+[GitHub Discussions](https://github.com/SneakyF0xy/blog/discussions)
+for questions and ideas
+- 🐛 **Issues**: Report bugs or request features via
+[GitHub Issues](https://github.com/SneakyF0xy/blog/issues)
 - 📖 **Documentation**: Check existing issues before creating new ones
 
 ## 📄 License
 
-All blog posts are copyrighted. If you want use it, cite! But code are open to use. License - see [LICENSE](LICENSE) file.
+All blog posts are copyrighted.
+If you want use it, cite!
+But code is open to use.
+License - see [LICENSE](LICENSE) file.
