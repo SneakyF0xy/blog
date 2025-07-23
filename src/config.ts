@@ -2,7 +2,7 @@ export const SITE = {
     website: "https://sneakyfoxy.com",
     author: "SneakyFoxy",
     profile: "https://github.com/SneakyF0xy",
-    desc: "Security research, CTF writeups, and cryptography analysis.",
+    description: "Security research, CTF writeups, and cryptography analysis.",
     title: "SneakyFoxy",
     ogImage: "sneaky-og.jpg",
     lightAndDarkMode: false,
