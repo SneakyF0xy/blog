@@ -434,7 +434,7 @@ main {
     }
 
     body {
-        width: 100% !important;
+        width: 92% !important;
         padding-left: 4% !important;
         padding-right: 4% !important;
         margin-left: 0 !important;
@@ -501,7 +501,7 @@ main {
 
 @media (width <= 760px) {
     body {
-        width: 100%;
+        width: 84%;
         padding-left: 8%;
         padding-right: 8%;
     }
