@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
 import PostHeader from '@/components/PostHeader.astro';
 import TagList from '@/components/TagList.astro';
+import NavBar from '@/components/NavBar.astro';
 import '@/styles/sneaky.css';
 
 export async function getStaticPaths() {
@@ -36,6 +37,7 @@ const structuredData = {
   structuredData={structuredData}
 >
   <main class="blog-post-container">
+    <NavBar/>
     <article class="blog-post">
       <PostHeader
         title={entry.data.title}

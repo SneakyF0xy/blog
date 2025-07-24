@@ -262,12 +262,55 @@ th {
     }
 }
 
+/* Navigation bar */
+nav {
+    margin-bottom: 2rem;
+}
+
+nav a {
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.nav-current {
+    font-weight: bold;
+}
+
+/* Blog posts */
+.blog-header {
+    padding-top: 5rem;
+
+    @media (width <= 480px) {
+        padding-top: 2rem;
+    }
+}
+
+.post-item {
+    margin-bottom: 5rem;
+}
+  
+.post-item:last-child {
+    margin-bottom: 0;
+}
+
+.posts-list {
+    padding-top: 5rem;
+
+    @media (width <= 480px) {
+        padding-top: 2rem;
+    }
+}
+
 /* Links */
 a:link,
 a:visited {
     color: inherit;
     text-underline-offset: 0.1em;
     text-decoration-thickness: 0.05em;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* Sidenotes, margin notes, figures, captions */
