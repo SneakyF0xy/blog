@@ -1,0 +1,17 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import NavBar from '@/components/NavBar.astro';
+import Header from '@/components/Header.astro';
+import { Content } from '@/content/about.md';
+import '@/styles/sneaky.css';
+
+const title =  "SneakyFoxy - CTF Player & Security Researcher"
+const description = "CTF player, cryptography researcher, reverse engineer"
+---
+
+<Layout title={title} description={description}>
+    <NavBar/>
+    <Header title="Hi, I'm SneakyFoxy" 
+			subtitle="CTF player, Security Researcher"/>
+    <Content />
+</Layout>
