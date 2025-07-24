@@ -1,20 +1,29 @@
+<!-- Since we got our header outside markdown we ignore the rule -->
+<!-- markdownlint-disable-next-line MD041 -->
 ## About Me
 
-<span class="newthought">Breaking things is my zen</span> — give me a web / crypto / reverse challenge and I'll disappear for hours. There's something addictive about that moment when everything clicks and the system gives up its secrets.
+<span class="newthought">Breaking things is my zen</span>
+— give me a web / crypto / reverse challenge and I'll disappear for hours.
+There's something addictive about that moment when
+everything clicks and the system gives up its secrets.
 
-I'm steadily climbing the CTFtime rankings, though I'll admit I'm better at solving challenges than leading teams.
+I'm steadily climbing the CTFtime rankings, though
+I'll admit I'm better at solving challenges than leading teams.
 
 ## What I Do
 
 **Cryptography** — PQC, lattice attacks (LLL), SageMath mostly.
 
-**Reverse Engineering** — Compiled binaries (Rust, Go, C/C++, Objective-C), interpreted languages (Python, Java, C#), malware analysis.
+**Reverse Engineering** — Compiled binaries (Rust, Go, C/C++, Objective-C),
+interpreted languages (Python, Java, C#), malware analysis.
 
 **Web Security** — Application security testing, vulnerability research.
 
-**Java Internals** — Deobfuscators, classloading mechanics, JVM internals, JNI/JVMTI interfaces, bytecode analysis.
+**Java Internals** — Deobfuscators, classloading mechanics, JVM internals,
+JNI/JVMTI interfaces, bytecode analysis.
 
-**Security Research** — Vulnerability discovery, exploit development, writing papers with LaTeX.
+**Security Research** — Vulnerability discovery, exploit development,
+writing papers with LaTeX.
 
 ## Let's Connect
 
