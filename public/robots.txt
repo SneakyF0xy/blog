@@ -4,4 +4,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https:///sitemap-index.xml
-flag{u-cant-see-me-where}

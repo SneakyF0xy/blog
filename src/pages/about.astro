@@ -1,17 +1,38 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import NavBar from '@/components/NavBar.astro';
-import Header from '@/components/Header.astro';
-import { Content } from '@/content/about.md';
-import '@/styles/sneaky.css';
+import Layout from "@/layouts/Layout.astro";
+import NavBar from "@/components/NavBar.astro";
+import Header from "@/components/Header.astro";
+import { Content } from "@/content/about.md";
+import "@/styles/sneaky.css";
 
-const title =  "SneakyFoxy - CTF Player & Security Researcher"
-const description = "CTF player, cryptography researcher, reverse engineer"
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "SneakyFoxy",
+  alternateName: "CTF player",
+  description:
+    "SneakyFoxy is a CTF competitor and security researcher in cryptography, reverse engineering, and web challenges—driven to uncover vulnerabilities and share in-depth technical insights.",
+  url: "https://sneakyfoxy.com/about",
+  sameAs: ["https://github.com/SneakyF0xy", "https://t.me/OxFFCAFEBABE"],
+  jobTitle: "Security Researcher",
+  knowsAbout: [
+    "Cryptography",
+    "Reverse Engineering",
+    "Web Security",
+    "CTF Challenges",
+  ],
+};
 ---
 
-<Layout title={title} description={description}>
-    <NavBar/>
-    <Header title="Hi, I'm SneakyFoxy" 
-			subtitle="CTF player, Security Researcher"/>
-    <Content />
+<Layout
+  title={"About"}
+  description={"SneakyFoxy is a CTF competitor and security researcher in cryptography, reverse engineering, and web challenges—driven to uncover vulnerabilities and share in‑depth technical insights."}
+  schema={schema}
+>
+  <NavBar />
+  <Header
+    title="Hi, I'm SneakyFoxy"
+    subtitle="CTF player, Security Researcher"
+  />
+  <Content />
 </Layout>
