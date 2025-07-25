@@ -17,7 +17,7 @@ const schema = {
   "@type": "Blog",
   name: SITE.title,
   description: SITE.description,
-  url: "https://sneakyfoxy.com/", // замените на актуальный URL
+  url: "https://sneakyfoxy.com/",
   author: {
     "@type": "Person",
     name: "SneakyFoxy",
@@ -28,17 +28,13 @@ const schema = {
     description: post.data.description,
     datePublished:
       post.data.date.toISOString?.() ?? new Date(post.data.date).toISOString(),
-    url: `https://sneakyfoxy.com/${post.id}`, // замените путь при необходимости
+    url: `https://sneakyfoxy.com/${post.id}`,
     keywords: post.data.tags?.join(", "),
   })),
 };
 ---
 
-<Layout
-  title={SITE.title}
-  description={SITE.description}
-  schema={schema}
->
+<Layout title={SITE.title} description={SITE.description} schema={schema}>
   <main>
     <NavBar />
     <Header
@@ -62,7 +58,7 @@ const schema = {
 
     {
       sortedPosts.length === 0 && (
-        <div class="empty-state">
+        <div>
           <p>No posts yet, but some interesting writeups are coming soon...</p>
         </div>
       )

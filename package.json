@@ -10,7 +10,7 @@
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:ui": "vitest --ui",
-    "test:build": "echo 'no e2e yet'",
+    "test:build": "playwright test",
     "lint:js": "eslint .",
     "lint:css": "stylelint \"**/*.{css,scss}\"",
     "lint:md": "markdownlint . --ignore node_modules",
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
+    "@playwright/test": "^1.54.1",
     "eslint": "^9.31.0",
     "globals": "^16.3.0",
     "markdownlint": "^0.38.0",
