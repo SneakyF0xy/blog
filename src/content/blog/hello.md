@@ -44,7 +44,7 @@ at 9:32 a.m. EDT July 16, 1969, from Kennedy Space Center's Launch Complex 39A.<
 
 <figure class="fig-normal">
 <!-- markdownlint-disable-next-line MD013 -->
-<img src="/src/static/images/hello/eloy-inside.jpg" alt="Eloy - Inside" width="1000"/>
+<img src="/images/hello/eloy-inside.jpg" alt="Eloy - Inside"/>
 <figcaption>© Inside (Eloy album), Roberto Patelli</figcaption>
 </figure>
 

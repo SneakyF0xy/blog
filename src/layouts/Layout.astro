@@ -14,7 +14,7 @@ const {
   description = SITE.description, 
   author = SITE.author,
   schema,
-  image = SITE.ogImage
+  image = SITE.og
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
