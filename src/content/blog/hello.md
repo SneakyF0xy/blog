@@ -42,6 +42,12 @@ at 9:32 a.m. EDT July 16, 1969, from Kennedy Space Center's Launch Complex 39A.<
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg" alt="Rocket Launch" width="1000"/>
 </figure>
 
+<figure class="fig-normal">
+<!-- markdownlint-disable-next-line MD013 -->
+<img src="/src/static/images/hello/eloy-inside.jpg" alt="Eloy - Inside" width="1000"/>
+<figcaption>© Inside (Eloy album), Roberto Patelli</figcaption>
+</figure>
+
 ## Space Missions Comparison Table
 
 | Mission       | Launch Date    | Destination      | Outcome        |
