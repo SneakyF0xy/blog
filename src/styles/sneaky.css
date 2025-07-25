@@ -184,6 +184,10 @@ figure {
     margin: 0 0 3em;
 }
 
+.fig-normal {
+    max-width: 100%;
+}
+
 figcaption {
     float: right;
     clear: right;
@@ -574,7 +578,7 @@ main {
     figure {
         max-width: 90%;
         position: relative;
-        margin: 0 auto;
+        margin: 2rem auto;
     }
 
     figcaption,
