@@ -1,19 +1,30 @@
 ---
 export interface Props {
   tags: string[];
+  linked?: boolean;
 }
 
-const { tags} = Astro.props;
+const { tags, linked = false } = Astro.props;
+
+const formatTagUrl = (tag: string) =>
+  `/tags/${tag.toLowerCase().replace(/\s+/g, "-")}/`;
 ---
 
-<div class={`tags-classic`}>
-  {tags.map(tag => (
-    <a 
-      href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}/`}
-      class="tag"
-      aria-label={`View all posts tagged with ${tag}`}
-    >
-      {tag}
-    </a>
-  ))}
+<div class="tags-classic">
+  {
+    tags.map((tag) => {
+      const content = <>{tag}</>;
+      return linked ? (
+        <a
+          href={formatTagUrl(tag)}
+          class="tag"
+          aria-label={`View all posts tagged with ${tag}`}
+        >
+          {content}
+        </a>
+      ) : (
+        <span class="tag">{content}</span>
+      );
+    })
+  }
 </div>

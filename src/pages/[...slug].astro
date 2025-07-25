@@ -1,14 +1,14 @@
 ---
-import { getCollection, render } from 'astro:content';
-import Layout from '@/layouts/Layout.astro';
-import PostHeader from '@/components/PostHeader.astro';
-import TagList from '@/components/TagList.astro';
-import NavBar from '@/components/NavBar.astro';
-import '@/styles/sneaky.css';
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import PostHeader from "@/components/PostHeader.astro";
+import TagList from "@/components/TagList.astro";
+import NavBar from "@/components/NavBar.astro";
+import "@/styles/sneaky.css";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
     params: { slug: entry.id },
     props: { entry },
   }));
@@ -17,38 +17,34 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 
-const structuredData = {
+const schema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": entry.data.title,
-  "description": entry.data.description,
-  "author": {
+  headline: entry.data.title,
+  description: entry.data.description,
+  author: {
     "@type": "Person",
-    "name": entry.data.author
+    name: entry.data.author,
   },
-  "datePublished": entry.data.date.toISOString()
+  datePublished: entry.data.date.toISOString(),
+  keywords: entry.data.tags,
 };
 ---
 
-<Layout 
+<Layout
   title={entry.data.title}
   description={entry.data.description}
   author={entry.data.author}
-  structuredData={structuredData}
+  schema={schema}
 >
-  <main class="blog-post-container">
-    <NavBar/>
-    <article class="blog-post">
-      <PostHeader
-        title={entry.data.title}
-        date={entry.data.date}
-      />
-      
-      {entry.data.tags && (
-        <TagList tags={entry.data.tags} />
-      )}
-      
-      <Content/>
+  <main>
+    <NavBar />
+    <article>
+      <PostHeader title={entry.data.title} date={entry.data.date} />
+
+      {entry.data.tags && <TagList tags={entry.data.tags} linked={true} />}
+
+      <Content />
     </article>
   </main>
 </Layout>

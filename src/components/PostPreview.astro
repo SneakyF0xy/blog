@@ -1,0 +1,25 @@
+---
+import PostHeader from "./PostHeader.astro";
+import TagList from "./TagList.astro";
+
+export interface Props {
+  title: string;
+  date: Date;
+  id: string;
+  description?: string;
+  tags?: string[];
+}
+
+const { title, date, id, description, tags } = Astro.props;
+const url = `/${id}/`;
+---
+
+<div>
+  <PostHeader title={title} date={date} level={2} titleLink={url} />
+
+  {tags && <TagList tags={tags} linked={false} />}
+
+  {description && <p>{description}</p>}
+
+  <meta itemprop="url" content={url} />
+</div>
